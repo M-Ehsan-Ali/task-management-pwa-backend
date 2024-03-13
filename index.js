@@ -10,7 +10,14 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(bodyParser.json());
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
 // Connect to MongoDB
 mongoose
   .connect("mongodb://localhost:27017/task-management-pwa", {
