@@ -17,6 +17,7 @@ mongoose
   .connect("mongodb://localhost:27017/task-management-pwa", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    socketTimeoutMS: 30000,
   })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
