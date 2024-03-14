@@ -14,11 +14,14 @@ app.use(cors());
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/task-management-pwa", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    socketTimeoutMS: 30000,
-  })
+  .connect(
+    "mongodb+srv://mrehsan51:<aCehPuBDndF9VkwW>@cluster0.2inetw9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      socketTimeoutMS: 30000,
+    }
+  )
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
