@@ -15,7 +15,7 @@ app.use(cors());
 // Connect to MongoDB
 mongoose
   .connect(
-    "mongodb+srv://mrehsan51:aCehPuBDndF9VkwW@cluster0.2inetw9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "mongodb+srv://mrehsan51:aCehPuBDndF9VkwW@cluster0.2inetw9.mongodb.net/task-management-pwa",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
