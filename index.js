@@ -10,11 +10,7 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.json());
 
 // CORS configuration
-app.use(
-  cors({
-    origin: "http://localhost:3000/login",
-  })
-);
+app.use(cors());
 
 // Connect to MongoDB
 mongoose
